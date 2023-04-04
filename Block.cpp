@@ -55,7 +55,8 @@ void Block::menu()
     bool t = true;
     while(t)
     {
-        std::cout << "#### BLOCK ####\n";
+        std::cout << "\n";
+        std::cout << "#### BLOCK ####\n\n";
         std::cout << "[" << Back       << "]" << " Back \n"
                   << "[" << AddPart    << "]" << " Add part \n"
                   << "[" << DeletePart << "]" << " Delete part \n"

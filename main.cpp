@@ -10,7 +10,7 @@ enum Menu
     Exit,      // Выход
     AddACar,   // Добавить автомобиль
     DeleteCar, // Удалить  автомобиль
-    СhooseCar // Выбрать  автомобиль
+    СhooseCar  // Выбрать  автомобиль
 
 };
 
@@ -87,6 +87,7 @@ int main()
     while(t)
     {
         std::cout << "\n";
+        std::cout << "#### MAIN MENU #### \n\n";
         std::cout << "[" << Exit       << "]" << "Exit         \n"
                   << "[" << AddACar    << "]" << "Add a car    \n"
                   << "[" << DeleteCar  << "]" << "Delete car   \n"
