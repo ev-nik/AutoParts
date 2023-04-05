@@ -4,10 +4,8 @@
 #include <string>
 #include <vector>
 
-
 struct Part
 {
     std::string name;
 };
-
 #endif // PART_H

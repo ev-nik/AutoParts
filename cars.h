@@ -14,12 +14,4 @@ std::map<int, std::string> cars =
     {40, "VOLKSWAGEN"},
     {80, "KIA"       }
 };
-
-
-
-
-
-
-
-
 #endif // CARS_H

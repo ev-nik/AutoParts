@@ -5,6 +5,7 @@
 #include "Auto.h"
 #include "Block.h"
 
+// Главное меню (что можно делать с автомобилями)
 enum Menu
 {
     Exit,      // Выход
@@ -13,7 +14,6 @@ enum Menu
     СhooseCar  // Выбрать  автомобиль
 
 };
-
 
 // Вывести на печать вектор
 void printAuto(std::vector<Auto>& cars)
@@ -42,7 +42,6 @@ void printTheAuto(std::vector<Auto>& cars, int num)
     }
 }
 
-
 // Удалить из вектора cars элемент у которого id совпадает с num
 // Удаляется только первое совпадение
 void deleteAuto(std::vector<Auto>& cars, int num)
@@ -68,7 +67,7 @@ void printAllAuto(std::map<int, std::string>& cars)
     }
 }
 
-// Добавить узел в авто
+// Добавить узел / блок в авто
 void addBlock(std::vector<Auto>& cars, std::string block)
 {
     for(size_t i = 0; i < cars.size(); i++)
@@ -81,18 +80,16 @@ int main()
 {
     std::vector<Auto> carsWithParts;
 
-
     bool t = true;
 
     while(t)
     {
         std::cout << "\n";
         std::cout << "#### MAIN MENU #### \n\n";
-        std::cout << "[" << Exit       << "]" << "Exit         \n"
-                  << "[" << AddACar    << "]" << "Add a car    \n"
-                  << "[" << DeleteCar  << "]" << "Delete car   \n"
+        std::cout << "[" << Exit      << "]" << "Exit         \n"
+                  << "[" << AddACar   << "]" << "Add a car    \n"
+                  << "[" << DeleteCar << "]" << "Delete car   \n"
                   << "[" << СhooseCar << "]" << "Choose a car \n";
-
 
         std::string tmp;
         std::cout << "-> ";
@@ -165,8 +162,6 @@ int main()
                 std::cin >> id;
 
                 std::cout << '\n';
-
-                //printTheAuto(carsWithParts, id);
 
                 for(size_t i = 0; i < carsWithParts.size(); i++)
                 {
