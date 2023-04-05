@@ -11,7 +11,8 @@ enum MenuBlocks
     BackMainMenu, // Вернуться в главное меню
     Add_Block,    // Добавить блок
     DeleteBlock,  // Удалить блок
-    SelectBlock   // Выбрать блок
+    SelectBlock,  // Выбрать блок
+    PrintBlocks   // Вывести на печать все блоки
 };
 
 
@@ -64,11 +65,13 @@ void Auto::menu()
         std::cout << "[" << BackMainMenu << "]" << "Back to main menu \n"
                   << "[" << Add_Block    << "]" << "Add block \n"
                   << "[" << DeleteBlock  << "]" << "Delete block \n"
-                  << "[" << SelectBlock  << "]" << "Select block \n";
+                  << "[" << SelectBlock  << "]" << "Select block \n"
+                  << "[" << PrintBlocks  << "]" << "Print blocks \n";
         std::cout << "-> ";
         std::string tmp;
         std::cin >> tmp;
         int operation;
+        std::cout << '\n';
 
         // Преобразование строки в число
         // Функция stoi() выбрасывает исключение
@@ -105,9 +108,7 @@ void Auto::menu()
                 std::cout << "\n";
 
                 addBlock(name);
-
-                printBlocks();
-
+                std::cout << "\n";
 
                 break;
             }
@@ -125,6 +126,7 @@ void Auto::menu()
                 deleteBlok(block);
 
                 printBlocks();
+                std::cout << "\n";
 
                 break;
             }
@@ -132,6 +134,9 @@ void Auto::menu()
             case SelectBlock:
             {
                 std::cout << "Enter a block to select \n";
+                std::cout << "\n";
+
+                printBlocks();
                 std::cout << "\n";
 
                 std::string block;
@@ -148,6 +153,13 @@ void Auto::menu()
                     }
                 }
 
+                break;
+            }
+
+            case PrintBlocks:
+            {
+                printBlocks();
+                std::cout << '\n';
                 break;
             }
 

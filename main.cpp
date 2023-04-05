@@ -133,8 +133,6 @@ int main()
 
                 if(cars.count(id) == 1)
                 {
-                    std::cout << "Ok\n";
-
                     Auto car;
                     car.id = id;
                     car.name = cars[id];

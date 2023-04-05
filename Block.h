@@ -6,11 +6,9 @@
 
 #include "Part.h"
 
-
 struct Block
 {
     std::string name;
-
     std::vector<Part> blockParts;
 
     void addPart(std::string name);
@@ -18,6 +16,4 @@ struct Block
     void menu();
     void deletePart(std::string namePart);
 };
-
-
 #endif // BLOCK_H
