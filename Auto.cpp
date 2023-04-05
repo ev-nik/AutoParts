@@ -66,10 +66,27 @@ void Auto::menu()
                   << "[" << DeleteBlock  << "]" << "Delete block \n"
                   << "[" << SelectBlock  << "]" << "Select block \n";
         std::cout << "-> ";
-        int operate;
-        std::cin >> operate;
+        std::string tmp;
+        std::cin >> tmp;
+        int operation;
 
-        switch(operate)
+        // Преобразование строки в число
+        // Функция stoi() выбрасывает исключение
+        // когда невозможно преобразовать строку в число
+        // Например: stoi("ABC") - будет исключение
+        // так как ввод производится с консоли,
+        // то ввести пользователь может не только число
+        try
+        {
+            operation = std::stoi(tmp);
+        }
+        catch(std::invalid_argument)
+        {
+            std::cout << "OOOOPs\n";
+            continue;
+        }
+
+        switch(operation)
         {
             case BackMainMenu:
             {
