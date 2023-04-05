@@ -94,10 +94,26 @@ int main()
                   << "[" << СhooseCar << "]" << "Choose a car \n";
 
 
-        int operation;
+        std::string tmp;
         std::cout << "-> ";
-        std::cin >> operation;
-        std::cout << "\n";
+        std::cin >> tmp;
+        int operation;
+
+        // Преобразование строки в число
+        // Функция stoi() выбрасывает исключение
+        // когда невозможно преобразовать строку в число
+        // Например: stoi("ABC") - будет исключение
+        // так как ввод производится с консоли,
+        // то ввести пользователь может не только число
+        try
+        {
+            operation = std::stoi(tmp);
+        }
+        catch(std::invalid_argument)
+        {
+            std::cout << "OOOOPs\n";
+            continue;
+        }
 
         switch(operation)
         {
