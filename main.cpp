@@ -11,7 +11,7 @@ enum Menu
     Exit,      // Выход
     AddACar,   // Добавить автомобиль
     DeleteCar, // Удалить  автомобиль
-    СhooseCar  // Выбрать  автомобиль
+    SelectCar  // Выбрать  автомобиль
 
 };
 
@@ -89,7 +89,7 @@ int main()
         std::cout << "[" << Exit      << "]" << "Exit         \n"
                   << "[" << AddACar   << "]" << "Add a car    \n"
                   << "[" << DeleteCar << "]" << "Delete car   \n"
-                  << "[" << СhooseCar << "]" << "Choose a car \n";
+                  << "[" << SelectCar << "]" << "Choose a car \n";
 
         std::string tmp;
         std::cout << "-> ";
@@ -149,7 +149,7 @@ int main()
                 break;
             }
 
-            case СhooseCar:
+            case SelectCar:
             {
                 printAuto(carsWithParts);
 

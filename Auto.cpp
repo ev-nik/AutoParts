@@ -61,7 +61,7 @@ void Auto::menu()
     while(temp)
     {
         std::cout << "\n";
-        std::cout << "#### MENU AUTO #### \n\n";
+        std::cout << "#### MENU " << name << " ####" << "\n";
         std::cout << "[" << BackMainMenu << "]" << "Back to main menu \n"
                   << "[" << Add_Block    << "]" << "Add block \n"
                   << "[" << DeleteBlock  << "]" << "Delete block \n"
